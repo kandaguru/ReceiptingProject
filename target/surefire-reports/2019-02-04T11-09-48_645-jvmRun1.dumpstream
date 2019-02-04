@@ -1,0 +1,753 @@
+# Created at 2019-02-04T11:19:56.687
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2019-02-04T11:19:57.183
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:57.206
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:57.716
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:57.736
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:58.249
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:58.271
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:58.782
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:58.808
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:59.320
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:59.359
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:59.877
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:19:59.909
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:00.423
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:00.455
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:00.967
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:00.987
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:01.497
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:01.523
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:02.035
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:02.062
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:02.573
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:02.597
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:03.118
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:03.144
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:03.661
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:03.877
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:04.382
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:04.588
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:05.187
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:05.224
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:05.742
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:05.771
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:06.289
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:06.318
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:06.829
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:06.868
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:07.397
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:07.436
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:07.957
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:07.993
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:08.512
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:08.559
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:09.089
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:09.165
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:09.695
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:09.723
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:10.241
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:10.267
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:10.788
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:10.828
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:11.374
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:11.412
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:12.088
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:12.138
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:12.661
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:12.698
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:13.259
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:13.295
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:13.831
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:13.872
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:14.398
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:14.451
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:14.978
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:15.015
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:15.539
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:15.569
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:16.093
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:16.137
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:16.659
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:16.696
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:17.221
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:17.249
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:17.768
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:17.790
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:18.316
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:18.354
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:18.949
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:18.984
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:19.498
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:19.547
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:20.131
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:20.210
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:20.729
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:20.769
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:21.294
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:21.323
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:21.835
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:21.867
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:22.414
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:22.500
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:23.029
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:23.080
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:23.603
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:23.642
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:24.162
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:24.210
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:24.743
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:24.779
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:25.313
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:25.366
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:25.884
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:25.917
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:26.448
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:26.481
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:27.007
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:27.047
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:27.567
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:27.593
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:28.122
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:28.169
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:28.693
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:28.732
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:29.281
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:29.333
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:29.859
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:29.898
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:30.418
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:30.455
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:30.980
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:31.020
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:31.537
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:31.571
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:32.091
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:32.126
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:32.649
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:32.680
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:33.201
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:33.241
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:33.771
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:33.821
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:34.350
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:34.383
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:34.900
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:34.925
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:35.445
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:35.472
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:35.986
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:36.016
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:36.547
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:36.588
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:37.128
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:37.173
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:37.688
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:37.723
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:38.245
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:38.272
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:38.789
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:38.836
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:39.357
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:39.386
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:39.942
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:39.977
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:40.497
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:40.523
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:41.040
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:41.070
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:41.586
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:41.610
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:42.137
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:42.174
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:42.708
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:42.753
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:43.288
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:43.318
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:43.837
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:43.863
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:44.381
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:44.408
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:44.928
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:44.967
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:45.483
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:45.566
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:46.111
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:46.144
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:46.661
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:46.681
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:47.208
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:47.248
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:47.766
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:47.792
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:48.306
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:48.336
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:48.857
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:48.882
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:49.404
+Unexpected IOException with stream: Trying to find Element By : By.xpath: //img[@id='processing']
+
+
+# Created at 2019-02-04T11:20:49.452
+Unexpected IOException with stream: Found Element By : By.xpath: //img[@id='processing']
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="147861" started-at="2019-02-04T21:47:17Z" finished-at="2019-02-04T21:49:45Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="147861" started-at="2019-02-04T21:47:17Z" finished-at="2019-02-04T21:49:45Z">
+      <class name="com.receipting.test.PSFFetchData">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.receipting.test.PSFFetchData@5b12b668]" name="setUp" is-config="true" duration-ms="9245" started-at="2019-02-04T21:47:17Z" finished-at="2019-02-04T21:47:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getRequestData(java.lang.String, java.lang.String)[pri:1, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getRequestData" duration-ms="98434" started-at="2019-02-04T21:47:26Z" data-provider="dataProviders" finished-at="2019-02-04T21:49:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[PO(s) Dispatched]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getRequestData -->
+        <test-method status="PASS" signature="getPoCancelledData()[pri:2, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getPoCancelledData" duration-ms="25967" started-at="2019-02-04T21:49:05Z" description="PO(s) Canceled" finished-at="2019-02-04T21:49:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPoCancelledData -->
+        <test-method status="PASS" signature="getTravelRelatedData()[pri:3, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getTravelRelatedData" duration-ms="1" started-at="2019-02-04T21:49:31Z" description="Travel Realted" finished-at="2019-02-04T21:49:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTravelRelatedData -->
+        <test-method status="PASS" signature="getIncorrectPOData()[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="14164" started-at="2019-02-04T21:49:31Z" description="Incorrect PO" finished-at="2019-02-04T21:49:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getIncorrectPOData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.receipting.test.PSFFetchData@5b12b668]" name="tearDown" is-config="true" duration-ms="2" started-at="2019-02-04T21:49:45Z" finished-at="2019-02-04T21:49:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.receipting.test.PSFFetchData -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

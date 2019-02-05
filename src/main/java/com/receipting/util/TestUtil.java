@@ -122,18 +122,16 @@ public class TestUtil extends ReceiptingBase {
 		}
 	}
 
-	
-
 	public static ArrayList<String> giveSciquestRequest() throws IOException {
 
 		sciquestRequest = new ArrayList<String>();
 		String stringCellContent;
-		File file = new File("C:\\Users\\kbas663\\RPA-AUTO\\ReceiptingProject\\977a702f-6c6a-4a65-8db6-bb012b8c2f14"); 
-		
-				//+ uuid);
+		File file = new File("C:\\Users\\kbas663\\RPA-AUTO\\ReceiptingProject\\" + uuid);
+
+		// + uuid);
 		File[] files = file.listFiles();
 
-		System.out.println(files.length);
+		System.out.println("Number of files====>" + files.length);
 
 		for (int i = 0; i < files.length; i++) {
 

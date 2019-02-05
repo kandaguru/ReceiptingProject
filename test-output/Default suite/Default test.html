@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 05 10:47:17 NZDT 2019</td>
+<td>Started on:</td><td>Tue Feb 05 16:11:20 NZDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>147 seconds (147861 ms)</td>
+<tr><td>Total time:</td><td>1219 seconds (1219659 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,24 +75,54 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.receipting.test.PSFFetchData.getIncorrectPOData()'><b>getIncorrectPOData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: Incorrect PO</td>
+<td title='com.receipting.test.PSFFetchData.getIncorrectPOData()'><b>getIncorrectPOData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: Incorrect PO<br>Parameters: Invalid PO Format -Incorrect length, XF0123456</td>
 <td></td>
 <td>14</td>
 <td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
 <tr>
-<td title='com.receipting.test.PSFFetchData.getPoCancelledData()'><b>getPoCancelledData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: PO(s) Canceled</td>
+<td title='com.receipting.test.PSFFetchData.getIncorrectPOData()'><b>getIncorrectPOData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: Incorrect PO<br>Parameters: Valid format, no corresponding PO in PS Finance, PS0000123456</td>
 <td></td>
-<td>25</td>
+<td>14</td>
+<td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
+<tr>
+<td title='com.receipting.test.PSFFetchData.getIncorrectPOData()'><b>getIncorrectPOData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: Incorrect PO<br>Parameters: Invalid Business Unit Code, XF0000123456</td>
+<td></td>
+<td>14</td>
+<td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
+<tr>
+<td title='com.receipting.test.PSFFetchData.getPoCancelledAndCompletedData()'><b>getPoCancelledAndCompletedData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: PO(s) Canceled<br>Parameters: 1, PO(s) Canceled</td>
+<td></td>
+<td>27</td>
+<td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
+<tr>
+<td title='com.receipting.test.PSFFetchData.getPoCancelledAndCompletedData()'><b>getPoCancelledAndCompletedData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: PO(s) Canceled<br>Parameters: 2, PO(s) Completed</td>
+<td></td>
+<td>74</td>
+<td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
+<tr>
+<td title='com.receipting.test.PSFFetchData.getPoCancelledAndCompletedData()'><b>getPoCancelledAndCompletedData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: PO(s) Canceled<br>Parameters: 2, Received</td>
+<td></td>
+<td>78</td>
 <td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
 <tr>
 <td title='com.receipting.test.PSFFetchData.getRequestData()'><b>getRequestData</b><br>Test class: com.receipting.test.PSFFetchData<br>Parameters: 1, PO(s) Dispatched</td>
 <td></td>
-<td>98</td>
+<td>106</td>
+<td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
+<tr>
+<td title='com.receipting.test.PSFFetchData.getRequestData()'><b>getRequestData</b><br>Test class: com.receipting.test.PSFFetchData<br>Parameters: 2, Partially Dispatched</td>
+<td></td>
+<td>241</td>
+<td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
+<tr>
+<td title='com.receipting.test.PSFFetchData.getRequestData()'><b>getRequestData</b><br>Test class: com.receipting.test.PSFFetchData<br>Parameters: 3, Partially Received</td>
+<td></td>
+<td>438</td>
 <td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
 <tr>
 <td title='com.receipting.test.PSFFetchData.getTravelRelatedData()'><b>getTravelRelatedData</b><br>Test class: com.receipting.test.PSFFetchData<br>Test method: Travel Realted</td>
 <td></td>
-<td>0</td>
+<td>158</td>
 <td>com.receipting.test.PSFFetchData@5b12b668</td></tr>
 </table><p>
 </body>

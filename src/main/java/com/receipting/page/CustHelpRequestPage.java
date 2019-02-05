@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.receipting.base.ReceiptingBase;
-import com.receipting.util.TestUtil;
 
 public class CustHelpRequestPage extends ReceiptingBase {
 
@@ -60,6 +59,7 @@ public class CustHelpRequestPage extends ReceiptingBase {
 		wait.until(ExpectedConditions.visibilityOf(topicDrpDwn));
 		Select serviceOptions = new Select(topicDrpDwn);
 		serviceOptions.selectByVisibleText("Request for Goods Receipting");
+		
 	}
 
 	public void selectSubTopic() {
@@ -77,10 +77,10 @@ public class CustHelpRequestPage extends ReceiptingBase {
 		validPONumber.clear();
 		validPONumber.sendKeys(requestNumber);
 
-		String currentDate = TestUtil.getCurrentDate("ddmmyyyy");
+		//String currentDate = TestUtil.getCurrentDate("ddmmyyyy");
 
 		dateReceived.clear();
-		dateReceived.sendKeys(currentDate);
+		dateReceived.sendKeys(prop.getProperty("custHelpDate"));
 
 		requestDetails.clear();
 		requestDetails.sendKeys(requestNumber + " is a " + requestType + " request");

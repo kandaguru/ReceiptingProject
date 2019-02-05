@@ -214,7 +214,7 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 		int mainFrameNum = TestUtil.giveFrameCount(By.xpath("//img[@name='PV_REQSTAT_WRK_PV_EXPAND_SECT$IMG$0']"));
 		driver.switchTo().frame(mainFrameNum);
 
-		int value = checkTravelSciquestRequest(); // checking if the fetched request is a travel related one
+		int value = checkTravelSciquestRequest(); // checking if the fetched request is a travel related or sciquest one
 
 		System.out.println("VALUE OF EXPND=======> " + value);
 
@@ -371,4 +371,62 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 	}
 
+	public String getTravelRelatedRequest() throws InterruptedException {
+
+		Thread.sleep(1000);
+		driver.switchTo().frame("ptifrmtgtframe");
+
+		String requestNumber = null;
+
+		try {
+			for (int i = 1; i <= 300; i++) {
+
+				Select select = new Select(driver.findElement(By.id("PV_REQSTAT_WRK_PV_REQ_ACTION$" + i)));
+				select.selectByVisibleText("Receive");
+				driver.findElement(By.id("PV_REQSTAT_WRK_PV_REQ_ACTION_PB$" + i)).click();
+
+				driver.switchTo().defaultContent();
+
+				Thread.sleep(1500L);
+
+				if (driver.findElements(By.id("alertmsg")).size() > 0) {
+
+					System.out.println("Travel Realted one!!");
+
+					alertMsgOkBtn.click();
+					int num = TestUtil.giveFrameCount(By.id("PV_REQSTAT_WRK_PV_REQ_ACTION$" + i));
+					driver.switchTo().frame(num);
+					requestNumber = getRequestNumber();
+					break;
+
+				}
+
+				else {
+
+					System.out.println("Not travel Related one!!");
+					Thread.sleep(1000L);
+					retrunToManageRequisitionFromTravelCheck();
+					loadingStatusReturn = waitForResultsLoadTime();
+
+					if (loadingStatusReturn) {
+						handleAlert();
+					}
+
+					int num = TestUtil.giveFrameCount(By.id("PV_REQSTAT_WRK_PV_REQ_ACTION$" + i));
+					driver.switchTo().frame(num);
+					continue;
+
+				}
+
+			}
+
+		} catch (Exception e) {
+
+			System.err.println("*****No Valid Requests in the given date range,Please increase the date range*****");
+			// e.printStackTrace();
+
+		}
+
+		return requestNumber;
+	}
 }

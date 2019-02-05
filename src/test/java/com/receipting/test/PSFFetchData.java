@@ -12,6 +12,7 @@ import com.receipting.page.CustHelpRequestPage;
 import com.receipting.page.CusthelpLoginPage;
 import com.receipting.page.PsfLoginPage;
 import com.receipting.page.PsfManageRequisitionPage;
+import com.receipting.page.QueryViewerPage;
 import com.receipting.util.TestUtil;
 
 public class PSFFetchData extends ReceiptingBase {
@@ -24,6 +25,7 @@ public class PSFFetchData extends ReceiptingBase {
 	PsfManageRequisitionPage psfManageRequisitionPage;
 	CusthelpLoginPage custHelpLoginPage;
 	CustHelpRequestPage custHelpRequestPage;
+	QueryViewerPage queryViewerPage;
 
 	boolean loadingStatus, loadingStatusReturn;
 	String requestNumberValue;
@@ -32,14 +34,27 @@ public class PSFFetchData extends ReceiptingBase {
 	public void setUp() throws IOException, InterruptedException {
 
 		intialize();
-		openPsf();
+
 		psfLoginPage = new PsfLoginPage();
+		queryViewerPage = new QueryViewerPage();
+		openQueryViewer();
 		psfLoginPage.psfLogin();
 		psfManageRequisitionPage = psfLoginPage.psfEnter2FA();
+		queryViewerPage.downloadSciquetFile();
+
+		openPsf();
+
+		try {
+			psfLoginPage.psfLogin();
+			psfLoginPage.psfEnter2FA();
+		} catch (Exception e) {
+
+			System.err.println("PSF Already logged In!!");
+		}
 
 	}
 
-	@Test(priority = 1, dataProvider = "dataProviders")
+	@Test(priority = 1, dataProvider = "mainDataProviders")
 	public void getRequestData(String sNo, String requestType) throws InterruptedException, IOException {
 
 		psfManageRequisitionPage.clickClearBtn();
@@ -83,11 +98,12 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 2, description = "PO(s) Canceled")
-	public void getPoCancelledData() throws InterruptedException, IOException {
+	@Test(priority = 2, description = "PO(s) Canceled", dataProvider = "PoCanceledAndCompletedDataProvider")
+	public void getPoCancelledAndCompletedData(String sNo, String requestType)
+			throws InterruptedException, IOException {
 
 		psfManageRequisitionPage.clickClearBtn();
-		psfManageRequisitionPage.chooseRequestState("PO(s) Canceled");
+		psfManageRequisitionPage.chooseRequestState(requestType);
 		psfManageRequisitionPage.clickSearch();
 
 		loadingStatus = psfManageRequisitionPage.waitForResultsLoadTime();
@@ -117,67 +133,66 @@ public class PSFFetchData extends ReceiptingBase {
 		custHelpRequestPage.selectService();
 		custHelpRequestPage.selectTopic();
 		custHelpRequestPage.selectSubTopic();
-		custHelpRequestPage.enterPODetails("PO(s) Canceled", requestNumberValue);
+		custHelpRequestPage.enterPODetails(requestType, requestNumberValue);
 		custHelpRequestPage.closeCustHelp();
 
 		TestUtil.switchToWindow("PSF");
 
 	}
 
-	
-	
-	@Test(priority = 3, description = "PO(s) Completed")
-	public void getPoCompletedData() throws InterruptedException, IOException {
-
-		psfManageRequisitionPage.clickClearBtn();
-		psfManageRequisitionPage.chooseRequestState("PO(s) Completed");
-		psfManageRequisitionPage.clickSearch();
-
-		loadingStatus = psfManageRequisitionPage.waitForResultsLoadTime();
-		if (loadingStatus)
-			psfManageRequisitionPage.handleAlert();
-
-		psfManageRequisitionPage.expandFirstRequest();
-		requestNumberValue = psfManageRequisitionPage.getRequestNumber();
-		openCustHelp();
-
-		try {
-			custHelpLoginPage = new CusthelpLoginPage();
-			custHelpLoginPage.custHelpLogin();
-			custHelpLoginPage.custHelpEnter2FA();
-			while (custHelpLoginPage.returnErrorMsg()) {
-
-				custHelpLoginPage.custHelpEnter2FA();
-
-			}
-		} catch (Exception e) {
-
-			System.err.println("Already Logged In!!!!!");
-
-		}
-
-		custHelpRequestPage = new CustHelpRequestPage();
-		custHelpRequestPage.selectService();
-		custHelpRequestPage.selectTopic();
-		custHelpRequestPage.selectSubTopic();
-		custHelpRequestPage.enterPODetails("PO(s) Completed", requestNumberValue);
-		custHelpRequestPage.closeCustHelp();
-
-		TestUtil.switchToWindow("PSF");
-
-	}
-	
-	
 	@Test(priority = 3, description = "Travel Realted")
-	public void getTravelRelatedData() {
+	public void getTravelRelatedData() throws InterruptedException, IOException {
 
-		System.out.println("TBD");
+		psfManageRequisitionPage.clickClearBtn();
+
+		psfManageRequisitionPage.chooseRequestState("PO(s) Dispatched");
+		psfManageRequisitionPage.enterDates();
+
+		psfManageRequisitionPage.clickSearch();
+
+		loadingStatus = psfManageRequisitionPage.waitForResultsLoadTime();
+		if (loadingStatus)
+			psfManageRequisitionPage.handleAlert();
+
+		requestNumberValue = psfManageRequisitionPage.getTravelRelatedRequest();
+
+		openCustHelp();
+
+		try {
+			custHelpLoginPage = new CusthelpLoginPage();
+			custHelpLoginPage.custHelpLogin();
+			custHelpLoginPage.custHelpEnter2FA();
+			while (custHelpLoginPage.returnErrorMsg()) {
+
+				custHelpLoginPage.custHelpEnter2FA();
+
+			}
+		} catch (Exception e) {
+
+			System.err.println("Already Logged In!!!!!");
+
+		}
+
+		custHelpRequestPage = new CustHelpRequestPage();
+		custHelpRequestPage.selectService();
+		custHelpRequestPage.selectTopic();
+		custHelpRequestPage.selectSubTopic();
+		custHelpRequestPage.enterPODetails("PO Dispatched-Travel", requestNumberValue);
+		custHelpRequestPage.closeCustHelp();
+
+		TestUtil.switchToWindow("PSF");
+
 	}
 
-	
-	
-	@Test(priority = 4, description = "Incorrect PO")
-	public void getIncorrectPOData() throws IOException, InterruptedException {
+	// @Test(priority = 4, description = "SciQuest")
+	public void getSciQuestData() {
+
+		// get a request from the downloaded excel
+
+	}
+
+	@Test(priority = 4, description = "Incorrect PO", dataProvider = "incorrectPoDataProviders")
+	public void getIncorrectPOData(String requestType, String requestNumber) throws IOException, InterruptedException {
 
 		TestUtil.openNewTab();
 		TestUtil.switchToWindow("New Tab");
@@ -202,7 +217,7 @@ public class PSFFetchData extends ReceiptingBase {
 		custHelpRequestPage.selectService();
 		custHelpRequestPage.selectTopic();
 		custHelpRequestPage.selectSubTopic();
-		custHelpRequestPage.enterPODetails("Incorrect PO", "XF1234567890");
+		custHelpRequestPage.enterPODetails(requestType, requestNumber);
 		custHelpRequestPage.closeCustHelp();
 
 		TestUtil.switchToWindow("PSF");
@@ -218,30 +233,59 @@ public class PSFFetchData extends ReceiptingBase {
 	}
 
 	@DataProvider
-	public Object[][] dataProviders() {
+	public Object[][] PoCanceledAndCompletedDataProvider() {
 
-		Object data[][] = new Object[1][2];
+		Object data[][] = new Object[3][2];
+
+		data[0][0] = "1";
+		data[0][1] = "PO(s) Canceled";
+
+		data[1][0] = "2";
+		data[1][1] = "PO(s) Completed";
+
+		data[2][0] = "2";
+		data[2][1] = "Received";
+
+		return data;
+
+	}
+
+	@DataProvider
+	public Object[][] incorrectPoDataProviders() {
+
+		Object data[][] = new Object[3][2];
+
+		data[0][0] = "Invalid PO Format -Incorrect length";
+		data[0][1] = "XF0123456";
+
+		data[1][0] = "Valid format, no corresponding PO in PS Finance";
+		data[1][1] = "PS0000123456";
+
+		data[2][0] = "Invalid Business Unit Code";
+		data[2][1] = "XF0000123456";
+
+		return data;
+
+	}
+
+	@DataProvider
+	public Object[][] mainDataProviders() {
+
+		Object data[][] = new Object[3][2];
 
 		data[0][0] = "1";
 		data[0][1] = "PO(s) Dispatched";
 
-//		data[1][0] = "2";
-//		data[1][1] = "PO(s) Dispatched";
-//
-//		data[2][0] = "3";
-//		data[2][1] = "Partially Dispatched";
+		data[1][0] = "2";
+		data[1][1] = "Partially Dispatched";
 
-//		data[3][0] = "4";
-//		data[3][1] = "PO(s) Canceled ";
-//
-//		data[4][0] = "5";
-//		data[4][1] = "PO(s) Completed";
-//
-//		data[5][0] = "6";
-//		data[5][1] = "Partially Received";
+		data[2][0] = "3";
+		data[2][1] = "Partially Received";
 
 		return data;
 
 	}
 
 }
+
+// UOA_OPEN_PO_RECEIPT_ACTIVE_SC

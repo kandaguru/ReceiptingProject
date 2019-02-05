@@ -20,8 +20,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import com.receipting.util.WebEventListener;
-
 public class ReceiptingBase {
 
 	public static Logger log = LogManager.getLogger(ReceiptingBase.class.getName());
@@ -142,4 +140,10 @@ public class ReceiptingBase {
 
 		driver.get(prop.getProperty("CustHelpurl").trim());
 	}
+
+	public void openQueryViewer() {
+
+		driver.get(prop.getProperty("PSFQueryViewerUrl"));
+	}
+
 }

@@ -1,117 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1219659" started-at="2019-02-05T03:11:20Z" finished-at="2019-02-05T03:31:40Z">
+  <suite name="Default suite" duration-ms="103703" started-at="2019-02-07T18:46:12Z" finished-at="2019-02-07T18:47:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1219659" started-at="2019-02-05T03:11:20Z" finished-at="2019-02-05T03:31:40Z">
+    <test name="Default test" duration-ms="103703" started-at="2019-02-07T18:46:12Z" finished-at="2019-02-07T18:47:56Z">
       <class name="com.receipting.test.PSFFetchData">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.receipting.test.PSFFetchData@5b12b668]" name="setUp" is-config="true" duration-ms="50728" started-at="2019-02-05T03:11:20Z" finished-at="2019-02-05T03:12:11Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.receipting.test.PSFFetchData@5b12b668]" name="setUp" is-config="true" duration-ms="52491" started-at="2019-02-07T18:46:12Z" finished-at="2019-02-07T18:47:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getRequestData(java.lang.String, java.lang.String)[pri:1, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getRequestData" duration-ms="106135" started-at="2019-02-05T03:12:11Z" data-provider="mainDataProviders" finished-at="2019-02-05T03:13:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[PO(s) Dispatched]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getRequestData -->
-        <test-method status="PASS" signature="getRequestData(java.lang.String, java.lang.String)[pri:1, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getRequestData" duration-ms="241482" started-at="2019-02-05T03:13:57Z" data-provider="mainDataProviders" finished-at="2019-02-05T03:17:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Partially Dispatched]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getRequestData -->
-        <test-method status="PASS" signature="getRequestData(java.lang.String, java.lang.String)[pri:1, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getRequestData" duration-ms="438359" started-at="2019-02-05T03:17:59Z" data-provider="mainDataProviders" finished-at="2019-02-05T03:25:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Partially Received]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getRequestData -->
-        <test-method status="PASS" signature="getPoCancelledAndCompletedData(java.lang.String, java.lang.String)[pri:2, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getPoCancelledAndCompletedData" duration-ms="27295" started-at="2019-02-05T03:25:17Z" description="PO(s) Canceled" data-provider="PoCanceledAndCompletedDataProvider" finished-at="2019-02-05T03:25:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[PO(s) Canceled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPoCancelledAndCompletedData -->
-        <test-method status="PASS" signature="getPoCancelledAndCompletedData(java.lang.String, java.lang.String)[pri:2, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getPoCancelledAndCompletedData" duration-ms="74704" started-at="2019-02-05T03:25:44Z" description="PO(s) Canceled" data-provider="PoCanceledAndCompletedDataProvider" finished-at="2019-02-05T03:26:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[PO(s) Completed]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPoCancelledAndCompletedData -->
-        <test-method status="PASS" signature="getPoCancelledAndCompletedData(java.lang.String, java.lang.String)[pri:2, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getPoCancelledAndCompletedData" duration-ms="78250" started-at="2019-02-05T03:26:59Z" description="PO(s) Canceled" data-provider="PoCanceledAndCompletedDataProvider" finished-at="2019-02-05T03:28:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Received]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPoCancelledAndCompletedData -->
-        <test-method status="PASS" signature="getTravelRelatedData()[pri:3, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getTravelRelatedData" duration-ms="158568" started-at="2019-02-05T03:28:17Z" description="Travel Realted" finished-at="2019-02-05T03:30:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTravelRelatedData -->
-        <test-method status="PASS" signature="getIncorrectPOData(java.lang.String, java.lang.String)[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="14924" started-at="2019-02-05T03:30:56Z" description="Incorrect PO" data-provider="incorrectPoDataProviders" finished-at="2019-02-05T03:31:11Z">
+        <test-method status="PASS" signature="getIncorrectPOData(java.lang.String, java.lang.String)[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="19859" started-at="2019-02-07T18:47:05Z" description="Incorrect PO" data-provider="incorrectPoDataProviders" finished-at="2019-02-07T18:47:25Z">
           <params>
             <param index="0">
               <value>
@@ -127,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getIncorrectPOData -->
-        <test-method status="PASS" signature="getIncorrectPOData(java.lang.String, java.lang.String)[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="14930" started-at="2019-02-05T03:31:11Z" description="Incorrect PO" data-provider="incorrectPoDataProviders" finished-at="2019-02-05T03:31:26Z">
+        <test-method status="PASS" signature="getIncorrectPOData(java.lang.String, java.lang.String)[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="15044" started-at="2019-02-07T18:47:25Z" description="Incorrect PO" data-provider="incorrectPoDataProviders" finished-at="2019-02-07T18:47:40Z">
           <params>
             <param index="0">
               <value>
@@ -143,7 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getIncorrectPOData -->
-        <test-method status="PASS" signature="getIncorrectPOData(java.lang.String, java.lang.String)[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="14226" started-at="2019-02-05T03:31:26Z" description="Incorrect PO" data-provider="incorrectPoDataProviders" finished-at="2019-02-05T03:31:40Z">
+        <test-method status="PASS" signature="getIncorrectPOData(java.lang.String, java.lang.String)[pri:4, instance:com.receipting.test.PSFFetchData@5b12b668]" name="getIncorrectPOData" duration-ms="16266" started-at="2019-02-07T18:47:40Z" description="Incorrect PO" data-provider="incorrectPoDataProviders" finished-at="2019-02-07T18:47:56Z">
           <params>
             <param index="0">
               <value>
@@ -159,7 +59,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getIncorrectPOData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.receipting.test.PSFFetchData@5b12b668]" name="tearDown" is-config="true" duration-ms="5" started-at="2019-02-05T03:31:40Z" finished-at="2019-02-05T03:31:40Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.receipting.test.PSFFetchData@5b12b668]" name="tearDown" is-config="true" duration-ms="3" started-at="2019-02-07T18:47:56Z" finished-at="2019-02-07T18:47:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

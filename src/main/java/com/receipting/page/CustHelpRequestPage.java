@@ -1,6 +1,8 @@
 package com.receipting.page;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,6 +46,9 @@ public class CustHelpRequestPage extends ReceiptingBase {
 	@FindBy(xpath = "//*[@id='rn_PageTitle']/h1")
 	WebElement thankyouMsg;
 
+	@FindBy(xpath = "//div[@class='rn_Padding']/p")
+	WebElement oscRequestNumber;
+
 	public void selectService() {
 
 		wait = new WebDriverWait(driver, 15);
@@ -59,7 +64,7 @@ public class CustHelpRequestPage extends ReceiptingBase {
 		wait.until(ExpectedConditions.visibilityOf(topicDrpDwn));
 		Select serviceOptions = new Select(topicDrpDwn);
 		serviceOptions.selectByVisibleText("Request for Goods Receipting");
-		
+
 	}
 
 	public void selectSubTopic() {
@@ -74,10 +79,12 @@ public class CustHelpRequestPage extends ReceiptingBase {
 
 	public void enterPODetails(String requestType, String requestNumber) throws InterruptedException {
 
+		wait = new WebDriverWait(driver, 15);
+
 		validPONumber.clear();
 		validPONumber.sendKeys(requestNumber);
 
-		//String currentDate = TestUtil.getCurrentDate("ddmmyyyy");
+		// String currentDate = TestUtil.getCurrentDate("ddmmyyyy");
 
 		dateReceived.clear();
 		dateReceived.sendKeys(prop.getProperty("custHelpDate"));
@@ -87,11 +94,24 @@ public class CustHelpRequestPage extends ReceiptingBase {
 
 		continueSubmitBtn.click();
 
+		String thankyouMsg = wait.until(ExpectedConditions.visibilityOf(oscRequestNumber)).getText();
+
+		Pattern p = Pattern.compile("\\d{6}[-]\\d{6}");
+		Matcher n = p.matcher(thankyouMsg);
+
+		while (n.find()) {
+			oscRequestNumberValue = n.group();
+		}
+
+		System.out.println("OSC Request Number for " + requestType + " with request number " + requestNumber + " is "
+				+ oscRequestNumberValue);
+		oscRequestNumbers.add(oscRequestNumberValue);
+
 	}
 
 	public void closeCustHelp() throws InterruptedException {
 
-		Thread.sleep(4000L);
+		Thread.sleep(2000L);
 		driver.close();
 
 	}

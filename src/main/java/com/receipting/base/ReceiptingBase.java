@@ -4,8 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Properties;
+import java.util.Set;
 import java.util.UUID;
 
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +25,9 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 public class ReceiptingBase {
 
 	public static Logger log = LogManager.getLogger(ReceiptingBase.class.getName());
+
+	public static String oscRequestNumberValue;
+	public static Set<String> oscRequestNumbers= new HashSet<String>();
 
 	public static WebDriver driver = null;
 	public static Properties prop;
@@ -147,3 +152,5 @@ public class ReceiptingBase {
 	}
 
 }
+
+//  \d{6}[-]\d{6}

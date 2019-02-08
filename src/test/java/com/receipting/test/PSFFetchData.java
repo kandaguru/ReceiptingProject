@@ -1,6 +1,7 @@
 package com.receipting.test;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -98,7 +99,7 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 2, description = "PO(s) Canceled", dataProvider = "PoCanceledAndCompletedDataProvider")
+	@Test(priority = 2, description = "PO(s) Canceled/completed", dataProvider = "PoCanceledAndCompletedDataProvider")
 	public void getPoCancelledAndCompletedData(String sNo, String requestType)
 			throws InterruptedException, IOException {
 
@@ -140,7 +141,7 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 3, description = "Travel Realted")
+	@Test(priority = 4, description = "Travel Realted")
 	public void getTravelRelatedData() throws InterruptedException, IOException {
 
 		psfManageRequisitionPage.clickClearBtn();
@@ -184,10 +185,49 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	// @Test(priority = 4, description = "SciQuest")
-	public void getSciQuestData() {
+	@Test(priority = 3, description = "SciQuest")
+	public void getSciQuestData() throws IOException, InterruptedException {
 
-		// get a request from the downloaded excel
+		ArrayList<String> sciReq = TestUtil.giveSciquestRequest();
+		String reqNumber = null;
+
+		for (int i = 0; i < sciReq.size(); i += 8) {
+
+			if (sciReq.get(i + 6).equalsIgnoreCase("Canceled"))
+				continue;
+			else
+				reqNumber = sciReq.get(i + 3);
+			break;
+
+		}
+
+		TestUtil.openNewTab();
+		TestUtil.switchToWindow("New Tab");
+		openCustHelp();
+
+		try {
+			custHelpLoginPage = new CusthelpLoginPage();
+			custHelpLoginPage.custHelpLogin();
+			custHelpLoginPage.custHelpEnter2FA();
+			while (custHelpLoginPage.returnErrorMsg()) {
+
+				custHelpLoginPage.custHelpEnter2FA();
+
+			}
+		} catch (Exception e) {
+
+			System.err.println("Already Logged In!!!!!");
+
+		}
+
+		custHelpRequestPage = new CustHelpRequestPage();
+		custHelpRequestPage.selectService();
+		custHelpRequestPage.selectTopic();
+		custHelpRequestPage.selectSubTopic();
+		custHelpRequestPage.enterPODetails("SciQuest", reqNumber);
+		custHelpRequestPage.closeCustHelp();
+
+		TestUtil.switchToWindow("PSF");
 
 	}
 
@@ -228,8 +268,9 @@ public class PSFFetchData extends ReceiptingBase {
 	public void tearDown() {
 
 		deleteFile();
-		// driver.close();
-		// driver = null;
+		System.out.println("The OSC request numbers for processing " + oscRequestNumbers);
+		driver.close();
+		driver = null;
 	}
 
 	@DataProvider

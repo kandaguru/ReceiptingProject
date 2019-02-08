@@ -281,6 +281,8 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 	public int checkTravelSciquestRequest() throws InterruptedException, IOException {
 
+		wait = new WebDriverWait(driver, 3);
+
 		try {
 			for (int i = 0; i <= 300; i++) {
 
@@ -347,7 +349,7 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 				} else {
 
-					alertMsgOkBtn.click();
+					wait.until(ExpectedConditions.elementToBeClickable(alertMsgOkBtn)).click();
 					int num = TestUtil.giveFrameCount(By.id("PV_REQSTAT_WRK_PV_REQ_ACTION$" + i));
 					driver.switchTo().frame(num);
 					continue;
@@ -379,7 +381,7 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 		String requestNumber = null;
 
 		try {
-			for (int i = 1; i <= 300; i++) {
+			for (int i = 0; i <= 300; i++) {
 
 				Select select = new Select(driver.findElement(By.id("PV_REQSTAT_WRK_PV_REQ_ACTION$" + i)));
 				select.selectByVisibleText("Receive");

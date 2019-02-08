@@ -124,12 +124,15 @@ public class TestUtil extends ReceiptingBase {
 
 	public static ArrayList<String> giveSciquestRequest() throws IOException {
 
+		String path = System.getProperty("user.dir");
+
 		sciquestRequest = new ArrayList<String>();
 		String stringCellContent;
-		File file = new File("C:\\Users\\kbas663\\RPA-AUTO\\ReceiptingProject\\" + uuid);
+		File folder = new File(path +"\\" + uuid);
 
-		// + uuid);
-		File[] files = file.listFiles();
+		//File file = new File("C:\\Users\\kbas663\\Desktop\\UOA_OPEN_PO_RECEIPT_ACTIVE_SCQ_555830114.xlsx");
+
+		File[] files = folder.listFiles();
 
 		System.out.println("Number of files====>" + files.length);
 

@@ -32,7 +32,7 @@ public class TestUtil extends ReceiptingBase {
 	}
 
 	public static long PAGE_LOAD_TIMEOUT = 20;
-	public static long IMPLICIT_WAIT_TIMEOUT = 10;
+	public static long IMPLICIT_WAIT_TIMEOUT = 0;
 
 	public static ArrayList<String> sciquestRequest;
 
@@ -128,9 +128,7 @@ public class TestUtil extends ReceiptingBase {
 
 		sciquestRequest = new ArrayList<String>();
 		String stringCellContent;
-		File folder = new File(path +"\\" + uuid);
-
-		//File file = new File("C:\\Users\\kbas663\\Desktop\\UOA_OPEN_PO_RECEIPT_ACTIVE_SCQ_555830114.xlsx");
+		File folder = new File(path + "\\" + uuid);
 
 		File[] files = folder.listFiles();
 
@@ -174,4 +172,29 @@ public class TestUtil extends ReceiptingBase {
 
 	}
 
+	public static void writeTestData(String requestType, String psfReqNo, String oscRequestNo, int counter) {
+
+		String sheetName = "Test Data";
+		String col1 = "Scenario";
+		String col2 = "PSF Request Number";
+		String col3 = "OSC Request Number";
+
+		String path = System.getProperty("user.dir");
+
+		Xls_Reader reader = new Xls_Reader(path+ "//src//main//java//com//receipting//testdata//testdata.xlsx");
+
+		if (!reader.isSheetExist(sheetName)) {
+
+			reader.addSheet(sheetName);
+			reader.addColumn(sheetName, col1);
+			reader.addColumn(sheetName, col2);
+			reader.addColumn(sheetName, col3);
+
+		}
+
+		reader.setCellData(sheetName, col1, counter, requestType);
+		reader.setCellData(sheetName, col2, counter, psfReqNo);
+		reader.setCellData(sheetName, col3, counter, oscRequestNo);
+
+	}
 }

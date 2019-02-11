@@ -91,7 +91,6 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 	public void clickClearBtn() throws InterruptedException {
 
-		Thread.sleep(1000L);
 		int framenum = TestUtil.giveFrameCount(By.id(clearBtnLocatorValue));
 		driver.switchTo().frame(framenum);
 		wait = new WebDriverWait(driver, 10);
@@ -101,7 +100,7 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 	public void chooseRequestState(String requestState) throws InterruptedException {
 
-		Thread.sleep(1000L);
+		Thread.sleep(2000L);
 		int attempt = 0;
 		while (attempt <= 2) {
 			try {
@@ -123,6 +122,7 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 	public void enterDates() throws InterruptedException {
 
+		Thread.sleep(1000L);
 		int attempt = 0;
 		while (attempt <= 2) {
 			try {
@@ -229,7 +229,7 @@ public class PsfManageRequisitionPage extends ReceiptingBase {
 
 		Thread.sleep(500L);
 
-		Assert.assertTrue(value > 0,
+		Assert.assertTrue(value > -1,
 				"*******No Valid request in the given date interval Increase the Time Frame!!!!!*******");
 
 		driver.switchTo().frame(mainFrameNum);

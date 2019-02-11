@@ -1,10 +1,12 @@
 package com.receipting.test;
 
 import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -55,7 +57,8 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 1, dataProvider = "mainDataProviders")
+	@Test(priority = 1, dataProvider = "mainDataProviders", description = "poDispatched And PartialyReceived", enabled = true)
+
 	public void getRequestData(String sNo, String requestType) throws InterruptedException, IOException {
 
 		psfManageRequisitionPage.clickClearBtn();
@@ -99,7 +102,7 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 2, description = "PO(s) Canceled/completed", dataProvider = "PoCanceledAndCompletedDataProvider")
+	@Test(priority = 2, description = "PO(s) Canceled/completed/Received", dataProvider = "PoCanceledAndCompletedDataProvider", enabled = true)
 	public void getPoCancelledAndCompletedData(String sNo, String requestType)
 			throws InterruptedException, IOException {
 
@@ -141,7 +144,7 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 4, description = "Travel Realted")
+	@Test(priority = 4, description = "Travel Realted", enabled = true)
 	public void getTravelRelatedData() throws InterruptedException, IOException {
 
 		psfManageRequisitionPage.clickClearBtn();
@@ -185,7 +188,7 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 3, description = "SciQuest")
+	@Test(priority = 3, description = "SciQuest", enabled = true)
 	public void getSciQuestData() throws IOException, InterruptedException {
 
 		ArrayList<String> sciReq = TestUtil.giveSciquestRequest();
@@ -231,7 +234,7 @@ public class PSFFetchData extends ReceiptingBase {
 
 	}
 
-	@Test(priority = 4, description = "Incorrect PO", dataProvider = "incorrectPoDataProviders")
+	@Test(priority = 4, description = "Incorrect PO", dataProvider = "incorrectPoDataProviders", enabled = true)
 	public void getIncorrectPOData(String requestType, String requestNumber) throws IOException, InterruptedException {
 
 		TestUtil.openNewTab();
@@ -284,7 +287,7 @@ public class PSFFetchData extends ReceiptingBase {
 		data[1][0] = "2";
 		data[1][1] = "PO(s) Completed";
 
-		data[2][0] = "2";
+		data[2][0] = "3";
 		data[2][1] = "Received";
 
 		return data;
@@ -312,21 +315,19 @@ public class PSFFetchData extends ReceiptingBase {
 	@DataProvider
 	public Object[][] mainDataProviders() {
 
-		Object data[][] = new Object[3][2];
+		Object data[][] = new Object[2][2];
 
 		data[0][0] = "1";
 		data[0][1] = "PO(s) Dispatched";
 
 		data[1][0] = "2";
-		data[1][1] = "Partially Dispatched";
+		data[1][1] = "Partially Received";
 
-		data[2][0] = "3";
-		data[2][1] = "Partially Received";
+//		data[2][0] = "3";
+//		data[2][1] = "Partially Dispatched";    Not a valid scenario
 
 		return data;
 
 	}
 
 }
-
-// UOA_OPEN_PO_RECEIPT_ACTIVE_SC

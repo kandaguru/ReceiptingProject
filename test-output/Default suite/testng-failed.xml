@@ -5,12 +5,8 @@
     <classes>
       <class name="com.receipting.test.PSFFetchData">
         <methods>
-          <include name="getPoCancelledAndCompletedData" invocation-numbers="0 1 2"/>
-          <include name="getSciQuestData"/>
-          <include name="getIncorrectPOData" invocation-numbers="0 1 2"/>
-          <include name="getRequestData" invocation-numbers="0 1 2"/>
+          <include name="getRequestData"/>
           <include name="setUp"/>
-          <include name="getTravelRelatedData"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.receipting.test.PSFFetchData -->

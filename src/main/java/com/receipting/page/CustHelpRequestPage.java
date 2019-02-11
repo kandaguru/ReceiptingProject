@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.receipting.base.ReceiptingBase;
+import com.receipting.util.TestUtil;
 
 public class CustHelpRequestPage extends ReceiptingBase {
 
@@ -105,6 +106,10 @@ public class CustHelpRequestPage extends ReceiptingBase {
 
 		System.out.println("OSC Request Number for " + requestType + " with request number " + requestNumber + " is "
 				+ oscRequestNumberValue);
+
+		TestUtil.writeTestData(requestType, requestNumber, oscRequestNumberValue, addDataCounter);
+		addDataCounter++;
+
 		oscRequestNumbers.add(oscRequestNumberValue);
 
 	}

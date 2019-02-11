@@ -27,8 +27,9 @@ public class ReceiptingBase {
 	public static Logger log = LogManager.getLogger(ReceiptingBase.class.getName());
 
 	public static String oscRequestNumberValue;
-	public static Set<String> oscRequestNumbers= new HashSet<String>();
+	public static Set<String> oscRequestNumbers = new HashSet<String>();
 
+	public static int addDataCounter=2;
 	public static WebDriver driver = null;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;

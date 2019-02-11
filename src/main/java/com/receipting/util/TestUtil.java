@@ -21,10 +21,14 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.SkipException;
 
 import com.receipting.base.ReceiptingBase;
 
 public class TestUtil extends ReceiptingBase {
+
+	static Xls_Reader reader;
+	static String sheetName = "Test Data";
 
 	public TestUtil() throws IOException {
 		super();
@@ -174,14 +178,13 @@ public class TestUtil extends ReceiptingBase {
 
 	public static void writeTestData(String requestType, String psfReqNo, String oscRequestNo, int counter) {
 
-		String sheetName = "Test Data";
 		String col1 = "Scenario";
 		String col2 = "PSF Request Number";
 		String col3 = "OSC Request Number";
 
 		String path = System.getProperty("user.dir");
 
-		Xls_Reader reader = new Xls_Reader(path+ "//src//main//java//com//receipting//testdata//testdata.xlsx");
+		reader = new Xls_Reader(path + "//src//main//java//com//receipting//testdata//testdata.xlsx");
 
 		if (!reader.isSheetExist(sheetName)) {
 
@@ -197,4 +200,20 @@ public class TestUtil extends ReceiptingBase {
 		reader.setCellData(sheetName, col3, counter, oscRequestNo);
 
 	}
+
+	public static void deleteSheet() {
+
+		String path = System.getProperty("user.dir");
+		reader = new Xls_Reader(path + "//src//main//java//com//receipting//testdata//testdata.xlsx");
+		reader.removeSheet(sheetName);
+
+	}
+
+	public static void skipTest(String reqType, boolean bool) {
+
+		if (!bool)
+			throw new SkipException(reqType + " Test case is disabled from the configuration File (data.properties)");
+
+	}
+
 }

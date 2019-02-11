@@ -17,6 +17,7 @@ import com.receipting.page.PsfLoginPage;
 import com.receipting.page.PsfManageRequisitionPage;
 import com.receipting.page.QueryViewerPage;
 import com.receipting.util.TestUtil;
+import com.receipting.util.Xls_Reader;
 
 public class PSFFetchData extends ReceiptingBase {
 
@@ -35,6 +36,8 @@ public class PSFFetchData extends ReceiptingBase {
 
 	@BeforeClass
 	public void setUp() throws IOException, InterruptedException {
+
+		TestUtil.deleteSheet();
 
 		intialize();
 
@@ -60,6 +63,10 @@ public class PSFFetchData extends ReceiptingBase {
 	@Test(priority = 1, dataProvider = "mainDataProviders", description = "poDispatched And PartialyReceived", enabled = true)
 
 	public void getRequestData(String sNo, String requestType) throws InterruptedException, IOException {
+
+		boolean tcConfig = Boolean.parseBoolean(prop.getProperty("poDispatchedAndPartialyReceived").trim());
+
+		TestUtil.skipTest(requestType, tcConfig);
 
 		psfManageRequisitionPage.clickClearBtn();
 
@@ -106,6 +113,10 @@ public class PSFFetchData extends ReceiptingBase {
 	public void getPoCancelledAndCompletedData(String sNo, String requestType)
 			throws InterruptedException, IOException {
 
+		boolean tcConfig = Boolean.parseBoolean(prop.getProperty("poCompletedCancelledAndReceived").trim());
+
+		TestUtil.skipTest(requestType, tcConfig);
+
 		psfManageRequisitionPage.clickClearBtn();
 		psfManageRequisitionPage.chooseRequestState(requestType);
 		psfManageRequisitionPage.clickSearch();
@@ -147,6 +158,12 @@ public class PSFFetchData extends ReceiptingBase {
 	@Test(priority = 4, description = "Travel Realted", enabled = true)
 	public void getTravelRelatedData() throws InterruptedException, IOException {
 
+		String requestType = "PO Dispatched-Travel";
+
+		boolean tcConfig = Boolean.parseBoolean(prop.getProperty("poTravel").trim());
+
+		TestUtil.skipTest(requestType, tcConfig);
+
 		psfManageRequisitionPage.clickClearBtn();
 
 		psfManageRequisitionPage.chooseRequestState("PO(s) Dispatched");
@@ -181,7 +198,7 @@ public class PSFFetchData extends ReceiptingBase {
 		custHelpRequestPage.selectService();
 		custHelpRequestPage.selectTopic();
 		custHelpRequestPage.selectSubTopic();
-		custHelpRequestPage.enterPODetails("PO Dispatched-Travel", requestNumberValue);
+		custHelpRequestPage.enterPODetails(requestType, requestNumberValue);
 		custHelpRequestPage.closeCustHelp();
 
 		TestUtil.switchToWindow("PSF");
@@ -190,6 +207,12 @@ public class PSFFetchData extends ReceiptingBase {
 
 	@Test(priority = 3, description = "SciQuest", enabled = true)
 	public void getSciQuestData() throws IOException, InterruptedException {
+
+		String requestType = "SciQuest";
+
+		boolean tcConfig = Boolean.parseBoolean(prop.getProperty("poSciquest").trim());
+
+		TestUtil.skipTest(requestType, tcConfig);
 
 		ArrayList<String> sciReq = TestUtil.giveSciquestRequest();
 		String reqNumber = null;
@@ -227,7 +250,7 @@ public class PSFFetchData extends ReceiptingBase {
 		custHelpRequestPage.selectService();
 		custHelpRequestPage.selectTopic();
 		custHelpRequestPage.selectSubTopic();
-		custHelpRequestPage.enterPODetails("SciQuest", reqNumber);
+		custHelpRequestPage.enterPODetails(requestType, reqNumber);
 		custHelpRequestPage.closeCustHelp();
 
 		TestUtil.switchToWindow("PSF");
@@ -236,6 +259,10 @@ public class PSFFetchData extends ReceiptingBase {
 
 	@Test(priority = 4, description = "Incorrect PO", dataProvider = "incorrectPoDataProviders", enabled = true)
 	public void getIncorrectPOData(String requestType, String requestNumber) throws IOException, InterruptedException {
+
+		boolean tcConfig = Boolean.parseBoolean(prop.getProperty("poIncorrrectFormat").trim());
+
+		TestUtil.skipTest(requestType, tcConfig);
 
 		TestUtil.openNewTab();
 		TestUtil.switchToWindow("New Tab");

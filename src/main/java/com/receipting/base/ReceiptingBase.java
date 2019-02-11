@@ -29,7 +29,7 @@ public class ReceiptingBase {
 	public static String oscRequestNumberValue;
 	public static Set<String> oscRequestNumbers = new HashSet<String>();
 
-	public static int addDataCounter=2;
+	public static int addDataCounter = 2;
 	public static WebDriver driver = null;
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
@@ -101,6 +101,10 @@ public class ReceiptingBase {
 
 		}
 
+		/*********************************
+		 * Below Code for developer logs
+		 *********************************/
+
 //		e_driver = new EventFiringWebDriver(driver);
 //		e_listener = new WebEventListener();
 //		e_driver.register(e_listener);
@@ -153,5 +157,3 @@ public class ReceiptingBase {
 	}
 
 }
-
-//  \d{6}[-]\d{6}
